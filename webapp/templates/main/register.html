@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}User Register{% endblock  %}
+
+{% block body %}
+    <from method="POST" action="url_for('.register')">
+        {{ form.hidden_tag()}}
+        <div class="form-group">
+            <div>
+                {{ form.username.label}}
+                {{ form.username(class_="form-control")}}
+            </div>
+            <div>
+                {{ form.password.label}}
+                {{ form.password(class_="form-control")}}
+            </div>
+            <div>
+                {{ form.confirm.label }}
+                {{ form.confirm(class_="form-control")}}
+            </div>
+        </div>
+    </from>
+{% endblock  %}
